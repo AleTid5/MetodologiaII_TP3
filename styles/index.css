@@ -82,6 +82,10 @@ div[type="product"] > div[type="image"] {
 	border-bottom: 1px solid #eaeaea;
 }
 
+div[type="image"] > img {
+	max-width: 250px;
+}
+
 div[type="product"] > div[type="description"] {
     margin: 15px 0 0 10px;
 }
