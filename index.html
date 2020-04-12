@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles/index.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="shortcut icon" href="img/logo.png">
+	<title>Electronic Site</title>
+</head>
+<body>
+	<section type="header">
+		<div type="logo">
+			<img src="img/logo.png" width="50" height="50">
+		</div>
+		<div type="searcher">
+			<input type="text" name="searcher" placeholder="Buscar productos">
+		</div>
+		<div type="box">
+			<i class="fas fa-search touchable"></i>
+		</div>
+	</section>
+	<section type="body">
+		<div type="filters">
+			<div type="header">Tipo de producto</div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="filter1" value="E" onchange="handleProduct(true)" checked>Electrodomésticos
+				</label>
+			</div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="filter1" value="C" onchange="handleProduct(false)">Computación
+				</label>
+			</div>
+			<div type="header">Sitio a buscar</div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="checkbox" class="form-check-input">Musimundo
+				</label>
+			</div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="checkbox" class="form-check-input">Garbarino
+				</label>
+			</div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="checkbox" class="form-check-input">Frávega
+				</label>
+			</div>
+			<div class="form-check hidden" name="hiddeable">
+				<label class="form-check-label">
+					<input type="checkbox" class="form-check-input">Compumundo
+				</label>
+			</div>
+		</div>
+		<div type="products">
+			<div type="product">
+				<div type="image">
+					<img src="https://http2.mlstatic.com/D_NQ_NP_875680-MLA40680038579_022020-W.webp" height="100%">
+				</div>
+				<div type="description">
+					<div type="seller-price">
+						<span>$ 35.500</span>
+						<span class="float-right"><img src="https://http2.mlstatic.com/resources/largesellers/143125485/frvega/small_logo201707200615.jpg" height="30px"></span>
+					</div>
+					<div type="title">Celular Libre Samsung Galaxy A70 128/6gb Sm-a705</div>
+				</div>
+			</div>
+			<div type="product">
+				<div type="image">
+					<img src="https://http2.mlstatic.com/D_NQ_NP_875680-MLA40680038579_022020-W.webp" height="100%">
+				</div>
+				<div type="description">
+					<div type="seller-price">
+						<span>$ 35.500</span>
+						<span class="float-right"><img src="https://http2.mlstatic.com/resources/largesellers/221591137/garbarino/logo201609190153.jpg" height="30px"></span>
+					</div>
+					<div type="title">Celular Libre Samsung Galaxy A70 128/6gb Sm-a705</div>
+				</div>
+			</div>
+			<div type="product">
+				<div type="image">
+					<img src="https://http2.mlstatic.com/D_NQ_NP_875680-MLA40680038579_022020-W.webp" height="100%">
+				</div>
+				<div type="description">
+					<div type="seller-price">
+						<span>$ 35.500</span>
+						<span class="float-right"><img src="https://d2jtk41dy90ppp.cloudfront.net/statics/2.4.32/images/compumundo-android-icon-512x512.png" height="30px"></span>
+					</div>
+					<div type="title">Celular Libre Samsung Galaxy A70 128/6gb Sm-a705</div>
+				</div>
+			</div>
+			<div type="product">
+				<div type="image">
+					<img src="https://http2.mlstatic.com/D_NQ_NP_875680-MLA40680038579_022020-W.webp" height="100%">
+				</div>
+				<div type="description">
+					<div type="seller-price">
+						<span>$ 35.500</span>
+						<span class="float-right"><img src="https://medias.musimundo.com/medias/sys_master/root/hd0/he0/9845762293790/M-roja-03.png" height="30px"></span>
+					</div>
+					<div type="title">Celular Libre Samsung Galaxy A70 128/6gb Sm-a705</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+<script type="text/javascript">
+	const handleProduct = isElectrodomestic => {
+		const elementsToHide = document.getElementsByName("hiddeable");
+
+		if (isElectrodomestic) {
+			elementsToHide.forEach(elementToHide => elementToHide.classList.add("hidden"));
+		} else {
+			elementsToHide.forEach(elementToHide => elementToHide.classList.remove("hidden"));
+		}
+	}
+</script>
+</html>
