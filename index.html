@@ -101,6 +101,9 @@
 						<span class="float-right"><img src="https://d2jtk41dy90ppp.cloudfront.net/statics/2.4.32/images/compumundo-android-icon-512x512.png" height="30px"></span>
 					</div>
 					<div type="title">Pochoclera Ultracomb PO-2700 aire caliente</div>
+					<div type="more-info" onclick="showMoreInfo()">
+						<i class="fas fa-info-circle"></i> <a href="#">Ver más información del producto</a>
+					</div>
 				</div>
 			</div>
 			<div type="product">
@@ -117,9 +120,30 @@
 			</div>
 		</div>
 	</section>
+	<section type="features">
+		<article type="more-info" id="more-info" class="hidden">
+			<div type="origin">Origen: Taiwán</div>
+			<div type="technicals">
+				<div>Temperatura máxima: 130º</div>
+				<div>Eficiencia de consumo: A+</div>
+				<div>Voltaje: 12v</div>
+				<div>Tipo de pintura: Rojo Mate</div>
+			</div>
+		</article>
+	</section>
 </body>
 <script type="text/javascript">
-	(() => document.getElementsByName("hiddeable").forEach(elementToHide => elementToHide.classList.add("hidden")))();
+	let isMoreInfoShowing = false;
+
+	(() => {
+		document.getElementsByName("hiddeable").forEach(elementToHide => elementToHide.classList.add("hidden"));
+		document.getElementsByTagName("body")[0].onclick = e => {
+			if (isMoreInfoShowing) {
+				document.getElementById("more-info").classList.add("hidden");
+				isMoreInfoShowing = false;
+			}
+		};
+	})();
 
 	const handleProduct = isElectrodomestic => {
 		const elementsToHide = document.getElementsByName("hiddeable");
@@ -129,6 +153,11 @@
 		} else {
 			elementsToHide.forEach(elementToHide => elementToHide.classList.remove("hidden"));
 		}
+	}
+
+	const showMoreInfo = () => {
+		document.getElementById("more-info").classList.remove("hidden");
+		setTimeout(() => isMoreInfoShowing = true, 0);
 	}
 </script>
 </html>

@@ -44,6 +44,12 @@ section[type="body"] {
 	height: 100vw;
 }
 
+section[type="body-inline"] {
+	display: inline;
+	width: 100%;
+	height: 100vw;
+}
+
 div[type="filters"] {
 	height: 100vw;
 	margin-left: calc(20px + 15%);
@@ -104,6 +110,148 @@ div[type="description"] > div[type="title"] {
 	color: #666;
 	font-size: 14px;
     font-weight: 300;
+    margin-top: 10px;
+}
+
+div[type="description"] > div[type="more-info"] {
+	color: #3483fa;
+	font-size: 10px;
+    font-weight: 300;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+section[type="features"] > article[type="more-info"] {
+	display: flex;
+	position: absolute;
+	top: 750px;
+	left: 150px;
+	background-color: #ccc;
+	width: 350px;
+	border-radius: 10px 15px 0 15px;
+	color: #666;
+	font-size: 12px;
+    font-weight: 400;
+}
+
+article[type="more-info"] > div[type="origin"] {
+	padding: 5px 20px 0 20px;
+	border-right: 1px solid #eaeaea;
+}
+
+article[type="more-info"] > div[type="technicals"] {
+	padding: 5px 0 5px 20px;
+}
+
+div[type="congrats"] {
+	width: 100%;
+	height: 200px;
+	background-color: #39b54a;
+}
+
+div[type="congrats"] > div {
+	display: flex;
+	padding-left: calc(15% + 20px);
+	color: white;
+}
+
+div[type="congrats"] > div > div[type="info"] {
+	width: 34%;
+	margin-left: 150px;
+}
+
+div[type="congrats"] > div > div[type="product"] {
+	width: 20%
+}
+
+div[type="info"] > div[type="title"] {
+	margin-top: 70px;
+	font-weight: 200;
+}
+
+div[type="info"] > div[type="subtitle"] {
+	font-size: 18px;
+}
+
+div[type="product"] > img {
+	margin-top: 25px;
+}
+
+div[type="information"] {
+	width: 100%;
+	padding-left: calc(20% + 70px);
+}
+
+div[type="information"] > div {
+	width: 620px;
+	height: 150px;
+	background-color: white;
+	position: relative;
+    top: -25px;
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+}
+
+div[type="information"] > div > div[type="title"] {
+	padding: 45px 0 0 35px;
+    font-size: 18px;
+    color: #777;
+}
+
+div[type="information"] > div > div[type="subtitle"] {
+	padding: 5px 0 0 35px;
+    font-size: 14px;
+    color: #777;
+    font-weight: 300;
+}
+
+div[type="information"] > div[type="seller"] {
+	margin-top: 15px;
+}
+
+div[type="information"] > c[type="buttons"] {
+	display: flex;
+}
+
+c[type="buttons"] > div > button[type="details"] {
+	font-size: 14px;
+	color: white;
+	border-color: #3483fa;
+    background-color: #3483fa;
+    margin-left: 370px;
+    border-radius: 3px;
+}
+
+section[type="modal"] {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	background-color: #00000070;
+}
+
+section[type="modal"] > div[type="detail"] {
+	width: 900px;
+	height: 80vh;
+	margin: 100px auto auto auto;
+	background-color: white;
+	display: flex;
+}
+
+div[type="detail"] > div[type="info"] {
+	width: 40%;
+	border-right: 1px solid #ccc;
+	padding: 25px;
+	font-size: 16px;
+	color: #777;
+}
+
+div[type="info"] > button[type="download"] {
+	font-size: 14px;
+	color: white;
+	border-color: #3483fa;
+    background-color: #3483fa;
+    border-radius: 3px;
     margin-top: 10px;
 }
 
