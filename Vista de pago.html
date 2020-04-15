@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles/index.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="shortcut icon" href="img/logo.png">
+	<title>Electronic Site</title>
+</head>
+<body>
+	<section type="header">
+		<div type="logo">
+			<img src="img/logo.png" width="50" height="50">
+		</div>
+	</section>
+	<section type="body">
+		<div type="filters">
+		</div>
+		<div type="sale-description">
+			<div type="product">
+				<div type="image">
+					<img src="https://http2.mlstatic.com/D_NQ_NP_813128-MLA40174747303_122019-V.webp" height="100%">
+				</div>
+				<div type="description">
+					<div type="seller-price">
+						<span>$ 2.199</span>
+						<span class="float-right"><img src="https://d2jtk41dy90ppp.cloudfront.net/statics/2.4.32/images/compumundo-android-icon-512x512.png" height="30px"></span>
+					</div>
+					<div type="title">Pochoclera Ultracomb PO-2700 aire caliente</div>
+				</div>
+			</div>
+			<div type="product">
+				<div type="image">
+					<img src="https://ep01.epimg.net/tecnologia/imagenes/2019/11/13/actualidad/1573658897_566202_1573659544_noticia_normal.jpg" height="100%">
+				</div>
+				<div type="description">
+					<div type="seller-price">
+						<span>Punto de retiro "Compumundo Palermo"</span>
+					</div>
+					<div type="title">Cuando confirmes la compra, comenzaremos a preparar tu producto</div>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	<section type="features">
+		<article type="more-info" id="more-info" class="hidden">
+			<div type="origin">Origen: Taiwán</div>
+			<div type="technicals">
+				<div>Temperatura máxima: 130º</div>
+				<div>Eficiencia de consumo: A+</div>
+				<div>Voltaje: 12v</div>
+				<div>Tipo de pintura: Rojo Mate</div>
+			</div>
+		</article>
+	</section>
+</body>
+<script type="text/javascript">
+	let isMoreInfoShowing = false;
+
+	(() => {
+		document.getElementsByName("hiddeable").forEach(elementToHide => elementToHide.classList.add("hidden"));
+		document.getElementsByTagName("body")[0].onclick = e => {
+			if (isMoreInfoShowing) {
+				document.getElementById("more-info").classList.add("hidden");
+				isMoreInfoShowing = false;
+			}
+		};
+	})();
+
+	const handleProduct = isElectrodomestic => {
+		const elementsToHide = document.getElementsByName("hiddeable");
+
+		if (isElectrodomestic) {
+			elementsToHide.forEach(elementToHide => elementToHide.classList.add("hidden"));
+		} else {
+			elementsToHide.forEach(elementToHide => elementToHide.classList.remove("hidden"));
+		}
+	}
+
+	const showMoreInfo = () => {
+		document.getElementById("more-info").classList.remove("hidden");
+		setTimeout(() => isMoreInfoShowing = true, 0);
+	}
+</script>
+</html>

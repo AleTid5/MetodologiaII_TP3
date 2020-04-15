@@ -88,17 +88,48 @@ div[type="product"] > div[type="image"] {
 	border-bottom: 1px solid #eaeaea;
 }
 
+div[type="description"] > div[type="seller-price"] {
+	color: #333;
+    font-size: 24px;
+}
+
+div[type="sale-description"] {
+	display: grid;
+  	grid-template-columns: repeat(3, 1fr);
+  	grid-auto-rows: 395px; 
+	margin-left: calc(20% - 200px);
+	margin-top: 20px;
+}
+
+div[type="sale-description"] > div[type="product"] {
+	display: flex;
+	background-color: white;
+	width: 400px;
+	height: 110px;
+	border-radius: 5px;
+	margin-right: 15px;
+}
+
+div[type="sale-description"] > div[type="product"] > div[type="image"] {
+	text-align: center;
+	width: 110px;
+    height: 110px;
+	max-width: 250px;
+	max-height: 250px;
+	border-right: 1px solid #eaeaea;
+}
+
+div[type="sale-description"] > div[type="product"] > div[type="description"] > div[type="seller-price"] {
+	color: #333;
+    font-size: 16px;
+}
+
 div[type="image"] > img {
 	max-width: 250px;
 }
 
 div[type="product"] > div[type="description"] {
     margin: 15px 0 0 10px;
-}
-
-div[type="description"] > div[type="seller-price"] {
-	color: #333;
-    font-size: 24px;
 }
 
 div[type="seller-price"] > .float-right {
